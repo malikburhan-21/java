@@ -1,0 +1,31 @@
+//  applets in java
+
+
+import java.applet.Applet;  
+import java.awt.*;  
+/*   <applet code="GraphicsDemo.class" width="300" height="300">   */     <-------  appletviewer will run this also, must be written in java file or create another html/txt file for it
+
+
+/* remember if u use this code, name java file as GraphicsDemo.java then its GraphicsDemo.class (bytecode) will be formed 
+     which is then used in applet attribute --> code    as   code="GraphicsDemo.class"     */ 
+
+
+  
+public class GraphicsDemo extends Applet
+{    
+   public void paint(Graphics g)
+   {  
+    g.setColor(Color.red);  
+    g.drawString("Welcome",50, 50);  
+    g.drawLine(20,30,20,300);  
+    g.drawRect(70,100,30,30);  
+    g.fillRect(170,100,30,30);  
+    g.drawOval(70,200,30,30);  
+  
+   g.setColor(Color.pink);  
+   g.fillOval(170,200,30,30);  
+   g.drawArc(90,150,30,30,30,270);  
+   g.fillArc(270,150,30,30,0,180);  
+  
+  }  
+}  
