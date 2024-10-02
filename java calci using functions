@@ -1,0 +1,65 @@
+ 
+//       separate funtions for doing sum,sub,mul,div      OR       simply  a calculator using methods in  JAVA 
+
+
+
+
+package com.calci.function;
+import java.util.Scanner;
+
+
+class input
+{
+    double x, y;
+    
+    void userinfo()
+    {
+     Scanner ref = new Scanner(System.in);
+     System.out.println("enter two numbers ");
+     x = ref.nextDouble();
+      y = ref.nextDouble();
+    }
+    
+    void addition()
+    {
+        double add=x+y;
+        System.out.println("sum = " +add);
+    }
+    
+      
+    void subtract()
+    {
+        double sub=x-y;
+        System.out.println("sub = " +sub);
+    }
+    
+      
+    void multiple()
+    {
+        double mul=x*y;
+        System.out.println("mul = " +mul);
+    }
+    
+      
+    void division()
+    {
+        double div=x/y;
+        System.out.println("div = " +div);
+    }
+    
+}
+
+ 
+public class Function 
+{
+    public static void main(String[] args) 
+    {
+         input obj=new input();
+         
+         obj.userinfo();
+         obj.addition();
+         obj.subtract();
+         obj.multiple();
+         obj.division();
+    }
+}
