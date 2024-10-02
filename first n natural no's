@@ -1,0 +1,25 @@
+ 
+// sum of first n natural no's
+
+
+package com.calci.forloop;
+
+import java.util.Scanner;
+
+
+public class Forloop 
+{   
+    public static void main(String[] args)
+    {
+         int sum=0;
+         int i;
+         Scanner obj=new Scanner(System.in);
+         System.out.println("enter value upto which u want sum of natural no's");          // screeen msg for user
+         int n = obj.nextInt();
+         for(i=1;i<=n;i++)                                                            // for loop start
+         {
+             sum=sum+i;                                            
+         }                                                                            // for loop end 
+         System.out.println("sum of n natural  no's =  " + sum);                   // result        
+    }
+}
