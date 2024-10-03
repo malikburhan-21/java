@@ -1,0 +1,58 @@
+
+//   applets in java 
+
+import java.applet.Applet;
+import java.awt.event.*;
+/* <applet code="AppletAdd" width="300" height="300"></applet> */
+
+ 
+public class AppletAdd extends Applet
+{ 
+    public void init()
+    {
+        Label l1,l2,l3;
+        TextField t1,t2;
+        Button b1;
+        
+        l1=new Label("first operand");
+        l2=new Label("second operand");
+        l3=new Label();
+        t1=new TextField();
+        t2=new TextField();
+        b1=new Button("add");
+        setLayout(null);
+        l1.setBounds(30,30,30,30);
+        l2.setBounds(30,80,30,30);
+        l3.setBounds(100,160,30,30);
+        t1.setBounds(80,30,40,30);
+        t2.setBounds(80,80,40,30);
+        b1.setBounds(100,130,40,40);
+        add(l1);
+        add(l2);
+        add(l3);
+        add(t1);
+        add(t2);
+        add(b1);
+        b1.addActionListener(new Handler());
+    }
+    
+    public class Handler implements ActionListener
+    {
+     
+        public void actionPerformed(ActionEvent e)
+        {
+            int a = Integer.parseInt(t1.getText());
+            int b = Integer.parseInt(t2.getText());
+            int sum = a+b ;
+            l3.setText("sum=" +sum);
+        }
+    }
+}
+
+
+
+
+
+
+
+
